@@ -1,0 +1,12 @@
+APP.jS
+axios.defaults.baseURL = "http://localhost:3000";
+
+//database --> user collection -->delete...
+//user model -->status -->default:true
+
+//login --> component --> form --> email password -->submit-->
+
+//status --> 200 --> stire id and role in localStaoge -->
+check role  --> navigate --> USER ==> /user -->app.js
+[note...]--> make sure populate.... login api -->node ---> userController
+findOne({email:email}).populate('roleId)

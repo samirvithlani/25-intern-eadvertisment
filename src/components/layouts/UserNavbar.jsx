@@ -1,6 +1,6 @@
 import React from "react";
 
-export const UserNavbar = () => {
+export const UserNavbar = ({ toggleSidebar }) => {
   return (
     <nav className="app-header navbar navbar-expand bg-body">
       {/*begin::Container*/}
@@ -8,10 +8,16 @@ export const UserNavbar = () => {
         <ul className="navbar-nav">
           <li className="nav-item">
             <a
-              className="nav-link"
-              data-lte-toggle="sidebar"
+              className="nav-link btn btn-light"
               href="#"
               role="button"
+              style={{
+                color: "black",
+                padding: "5px 10px",
+                border: "1px solid #ccc",
+                borderRadius: "5px",
+              }}
+              onClick={toggleSidebar}
             >
               <i className="bi bi-list" />
             </a>
