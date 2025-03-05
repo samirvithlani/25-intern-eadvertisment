@@ -21,6 +21,9 @@ export const Login = () => {
       if(res.data.data.roleId.name === "USER"){
         navigate("/user") //check in app.js
       }
+      if(res.data.data.roleId.name ==="Agency"){
+        navigate("/agency") //check in app.js
+      }
     }
     else{
       alert("Login Failed")
