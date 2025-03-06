@@ -9,11 +9,12 @@ import { AddScreen } from "./components/agency/AddScreen";
 import axios from "axios";
 import "./assets/adminlte.css";
 import "./assets/adminlte.min.css";
+import PrivateRoutes from "./hooks/PrivateRoutes";
 
 function App() {
   //axios.defaults.baseURL = "http://localhost:8000";
   axios.defaults.baseURL = "http://localhost:3000";
-  
+
   const location = useLocation();
 
   useEffect(() => {
@@ -26,15 +27,24 @@ function App() {
   }, [location.pathname]);
 
   return (
-    <div className={location.pathname === "/login" || location.pathname === "/signup" ? "" : "app-wrapper"}>
+    <div
+      className={
+        location.pathname === "/login" || location.pathname === "/signup"
+          ? ""
+          : "app-wrapper"
+      }
+    >
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/user" element={<UserSidebar />}>
-          <Route path="profile" element={<UserProfile />} />
-        </Route>
-        <Route path="/agency" element={<AgencySidebar />}>
-          <Route path="addscreen" element={<AddScreen />} />
+
+        <Route path="" element={<PrivateRoutes />}>
+          <Route path="/user" element={<UserSidebar />}>
+            <Route path="profile" element={<UserProfile />} />
+          </Route>
+          <Route path="/agency" element={<AgencySidebar />}>
+            <Route path="addscreen" element={<AddScreen />} />
+          </Route>
         </Route>
       </Routes>
     </div>

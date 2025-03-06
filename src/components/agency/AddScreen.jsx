@@ -35,6 +35,7 @@ export const AddScreen = () => {
 
     const userId = localStorage.getItem("id")
     data.userId = userId;
+    
     const res = await axios.post("/hording/add",data)
     console.log(res.data)
 
