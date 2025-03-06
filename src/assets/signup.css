@@ -1,0 +1,85 @@
+/* Signup Page Styles */
+.signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1d4b3f;
+  }
+  
+  .signup-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+  }
+  
+  .brand-logo {
+    width: 60px;
+    height: 60px;
+    background: #c7fa54;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .signup-btn {
+    width: 100%;
+    padding: 12px;
+    background: #c7fa54;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .signup-btn:hover {
+    background: #b6e245;
+  }
+  
+  .signup-link p {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  .signup-link a {
+    color: #1d4b3f;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  

@@ -1,0 +1,122 @@
+/* LandingPage.css */
+.landing-container {
+    background-color: #1d4b3f;
+    color: white;
+    padding: 50px 0;
+  }
+  
+  .landing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-link {
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+  }
+  
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  
+  .hero-content h1 {
+    font-size: 42px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .btn-primary {
+    background-color: #c7fa54;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    color: black;
+  }
+  
+  .btn-secondary {
+    background-color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    color: black;
+    margin-left: 15px;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+  }
+  
+  .trusted-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    margin-top: 50px;
+  }
+  
+  .trusted-brands img {
+    width: 100px;
+    margin: 0 15px;
+    opacity: 0.7;
+  }
+  
+  .trusted-users {
+    display: flex;
+    align-items: center;
+  }
+  
+  .trusted-users img {
+    width: 50px;
+    border-radius: 50%;
+    margin-left: -15px;
+  }
+  
+  .trusted-users span {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section {
+      flex-direction: column;
+      text-align: center;
+    }
+    .hero-image {
+      margin-top: 20px;
+    }
+    .trusted-section {
+      flex-direction: column;
+      text-align: center;
+    }
+    .trusted-brands img {
+      width: 70px;
+    }
+  }
+  

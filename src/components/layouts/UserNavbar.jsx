@@ -1,4 +1,5 @@
 import React from "react";
+import hamburgermenu from "../../assets/images/hamburgermenu.png";
 
 export const UserNavbar = ({ toggleSidebar }) => {
   return (
@@ -19,7 +20,7 @@ export const UserNavbar = ({ toggleSidebar }) => {
               }}
               onClick={toggleSidebar}
             >
-              <i className="bi bi-list" />
+              <img src={hamburgermenu} style={{height:"25px",width:"25px"}}></img>
             </a>
           </li>
           <li className="nav-item d-none d-md-block">
