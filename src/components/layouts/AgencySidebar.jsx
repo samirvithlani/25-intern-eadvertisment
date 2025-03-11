@@ -65,7 +65,7 @@ export const AgencySidebar = () => {
                 </Link>
                 <ul className="nav nav-treeview">
                   <li className="nav-item">
-                    <Link to="addscreen" className="nav-link active">
+                    <Link to="myscreens" className="nav-link active">
                       <i className="nav-icon bi bi-speedometer" />
                       <p>
                         VIEW MY SCREENS

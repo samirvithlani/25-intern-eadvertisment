@@ -11,6 +11,8 @@ import "./assets/adminlte.css";
 import "./assets/adminlte.min.css";
 import PrivateRoutes from "./hooks/PrivateRoutes";
 import LandingPage from "./components/common/LandingPage";
+import { AddScreen2 } from "./components/agency/AddScreen2";
+import { ViewMyScreens } from "./components/agency/ViewMyScreens";
 
 function App() {
   //axios.defaults.baseURL = "http://localhost:8000";
@@ -45,7 +47,9 @@ function App() {
             <Route path="profile" element={<UserProfile />} />
           </Route>
           <Route path="/agency" element={<AgencySidebar />}>
-            <Route path="addscreen" element={<AddScreen />} />
+            {/* <Route path="addscreen" element={<AddScreen />} /> */}
+            <Route path="addscreen" element={<AddScreen2 />} />
+            <Route path="myscreens" element ={<ViewMyScreens/>}></Route>
           </Route>
         </Route>
       </Routes>
