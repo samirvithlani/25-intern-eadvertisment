@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 export const ViewMyScreens = () => {
 
@@ -27,6 +28,7 @@ export const ViewMyScreens = () => {
                 <tr>
                     <th>hoardingDimension</th>
                     <th>IMAGE</th>
+                    <th>ACTION</th>
                 </tr>
             </thead>
             <tbody>
@@ -37,6 +39,9 @@ export const ViewMyScreens = () => {
                         <td>
                             <img  style ={{height:100,width:100}}src={sc?.hordingURL}></img>
                         </td>
+                        <td>
+                            <Link to ={`/agency/updateScreen/${sc._id}`} className ="btn btn-info">UPDATE</Link>
+                            </td>
                     </tr>
                    }) 
                 }

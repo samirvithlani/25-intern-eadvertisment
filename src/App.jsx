@@ -13,6 +13,7 @@ import PrivateRoutes from "./hooks/PrivateRoutes";
 import LandingPage from "./components/common/LandingPage";
 import { AddScreen2 } from "./components/agency/AddScreen2";
 import { ViewMyScreens } from "./components/agency/ViewMyScreens";
+import { UpdateMyScreen } from "./components/agency/UpdateMyScreen";
 
 function App() {
   //axios.defaults.baseURL = "http://localhost:8000";
@@ -50,6 +51,7 @@ function App() {
             {/* <Route path="addscreen" element={<AddScreen />} /> */}
             <Route path="addscreen" element={<AddScreen2 />} />
             <Route path="myscreens" element ={<ViewMyScreens/>}></Route>
+            <Route path ="updateScreen/:id"element = {<UpdateMyScreen/>}></Route>
           </Route>
         </Route>
       </Routes>
