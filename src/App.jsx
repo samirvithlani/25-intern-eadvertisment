@@ -14,6 +14,7 @@ import LandingPage from "./components/common/LandingPage";
 import { AddScreen2 } from "./components/agency/AddScreen2";
 import { ViewMyScreens } from "./components/agency/ViewMyScreens";
 import { UpdateMyScreen } from "./components/agency/UpdateMyScreen";
+import { HordingList } from "./components/admin/HordingList";
 
 function App() {
   //axios.defaults.baseURL = "http://localhost:8000";
@@ -42,6 +43,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/" element ={<LandingPage/>}></Route>
+        <Route path ="/hordinglist" element = {<HordingList/>}></Route>
 
         <Route path="" element={<PrivateRoutes />}>
           <Route path="/user" element={<UserSidebar />}>
