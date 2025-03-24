@@ -15,6 +15,8 @@ import { AddScreen2 } from "./components/agency/AddScreen2";
 import { ViewMyScreens } from "./components/agency/ViewMyScreens";
 import { UpdateMyScreen } from "./components/agency/UpdateMyScreen";
 import { HordingList } from "./components/admin/HordingList";
+import { Twitter } from "./components/Twitter";
+import { ResetPassword } from "./components/common/ResetPassword";
 
 function App() {
   //axios.defaults.baseURL = "http://localhost:8000";
@@ -44,6 +46,9 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/" element ={<LandingPage/>}></Route>
         <Route path ="/hordinglist" element = {<HordingList/>}></Route>
+        <Route path="/twitter" element = {<Twitter/>}></Route>
+        <Route path ="/resetpassword/:token" element={<ResetPassword/>}></Route>
+
 
         <Route path="" element={<PrivateRoutes />}>
           <Route path="/user" element={<UserSidebar />}>
