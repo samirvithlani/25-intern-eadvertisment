@@ -8,25 +8,44 @@ export const Login = () => {
   const navigate = useNavigate();
   const { register, handleSubmit } = useForm();
 
+  // const submitHandler = async (data) => {
+  //   try {
+  //     const res = await axios.post("/user/login", data);
+  //     if (res.status === 200) {
+  //       alert("Login Success");
+  //       localStorage.setItem("id", res.data.data._id);
+  //       localStorage.setItem("role", res.data.data.roleId.name);
+
+  //       if (res.data.data.roleId.name === "USER") {
+  //         navigate("/user");
+  //       } else if (res.data.data.roleId.name === "Agency") {
+  //         navigate("/agency");
+  //       }
+  //     }
+  //   } catch (error) {
+  //     alert("Login Failed");
+  //   }
+  // };
+
   const submitHandler = async (data) => {
     try {
       const res = await axios.post("/user/login", data);
-      if (res.status === 200) {
-        alert("Login Success");
-        localStorage.setItem("id", res.data.data._id);
-        localStorage.setItem("role", res.data.data.roleId.name);
-
-        if (res.data.data.roleId.name === "USER") {
-          navigate("/user");
-        } else if (res.data.data.roleId.name === "Agency") {
-          navigate("/agency");
-        }
-      }
+      console.log(res.data.token)
+      localStorage.setItem("token",res.data.token)
+      
     } catch (error) {
       alert("Login Failed");
     }
   };
 
+  const userApi = async()=>{
+
+    axios.get("url",{
+      headers:{
+        "Authorization":"Beaer "+localStorage.getItem("token")
+      }
+    })
+  }
   return (
     <div className="login">
       <div className="login-card">
